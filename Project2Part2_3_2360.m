@@ -78,6 +78,8 @@ zlabel('Elevation (meters)');
 grid
 
 figure(2)
+Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
+%contour(dataLong,dataLat,(U*sigma*V'/1000)', Level)
 contour(dataLong,dataLat,(U*sigma*V'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
 xlabel('Longitude (degrees)');
@@ -136,6 +138,8 @@ zlabel('Elevation (meters)');
 grid
 
 figure(4)
+Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
+%contour(dataLong,dataLat,(U10*sigma10*V10'/1000)', Levels)
 contour(dataLong,dataLat,(U10*sigma10*V10'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
 xlabel('Longitude (degrees)');
@@ -190,6 +194,8 @@ zlabel('Elevation (meters)');
 grid
 
 figure(6)
+Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
+%contour(dataLong,dataLat,(U100*sigma100*V100'/1000)', Levels)
 contour(dataLong,dataLat,(U100*sigma100*V100'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=100)');
 xlabel('Longitude (degrees)');
