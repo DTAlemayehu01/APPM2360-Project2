@@ -24,7 +24,7 @@ for i = 1:50
         end
         u_new = u_new - summation';
         u_new = u_new/norm(u_new);
-        if norm(u_new - u) < 0.001
+        if norm(u_new - u) > 0.002
             break;
         end
         u = u_new;
@@ -68,7 +68,7 @@ nnz_efficiency
 % PART 3: Image/Contour Map
 %
 figure(1)
-surf(dataLong,dataLat,((U*sigma*V')/1000)','EdgeColor','none')
+surf(dataLong,dataLat,(U*sigma*V'/1000)','EdgeColor','none')
 colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
 xlabel('Longitude (degrees)');
@@ -79,7 +79,7 @@ grid
 figure(2)
 Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
 %contour(dataLong,dataLat,(U*sigma*V'/1000)', Level)
-contour(dataLong,dataLat,((U*sigma*V')/1000)')
+contour(dataLong,dataLat,(U*sigma*V'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
@@ -108,7 +108,7 @@ for i = 1:10
         end
         u_new = u_new - summation';
         u_new = u_new/norm(u_new);
-        if norm(u_new - u) < 0.001
+        if norm(u_new - u) > 0.002
             break;
         end
         u = u_new;
@@ -116,18 +116,18 @@ for i = 1:10
     V10(:,i) = u_new';
 end
 
-[sigma10] = eig(A_T*A, "matrix");
+[sigma10] = eig(A*A_T, "matrix");
 
 sigma10 = sqrt(sigma10);
 sigma10 = trimdata(sigma,[10,10]);
 
 U10 = [];
 for i = 1:10
-    U10(:,i) = A*V10(:,i)/sigma10(i,i);
+    U10(:,i) = A*V(:,i)/sigma10(i,i);
 end
 
 figure(3)
-surf(dataLong,dataLat,((U10*sigma10*V10')/1000)','EdgeColor','none')
+surf(dataLong,dataLat,(U10*sigma10*V10'/1000)','EdgeColor','none')
 colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
 xlabel('Longitude');
@@ -138,7 +138,7 @@ grid
 figure(4)
 Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
 %contour(dataLong,dataLat,(U10*sigma10*V10'/1000)', Levels)
-contour(dataLong,dataLat,((U10*sigma10*V10')/1000)')
+contour(dataLong,dataLat,(U10*sigma10*V10'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
@@ -151,10 +151,11 @@ grid
 % 
 V100 = zeros(1440, 100);
 
+n = 1440;
+u = randn(n,1);
+u = u / norm(u);
+
 for i = 1:100
-    n = 1440;
-    u = randn(n,1);
-    u = u / norm(u);
     while 1
         u_new = A_T*A*u;
         summation = 0;
@@ -163,7 +164,7 @@ for i = 1:100
         end
         u_new = u_new - summation';
         u_new = u_new/norm(u_new);
-        if norm(u_new - u) < 0.001
+        if norm(u_new - u) > 0.002
             break;
         end
         u = u_new;
@@ -171,7 +172,7 @@ for i = 1:100
     V100(:,i) = u_new';
 end
 
-[sigma100] = eig(A_T*A, "matrix");
+[sigma100] = eig(A*A_T, "matrix");
 
 sigma100 = sqrt(sigma100);
 sigma100 = trimdata(sigma100,[100 100]);
@@ -182,7 +183,7 @@ for i = 1:100
 end
 
 figure(5)
-surf(dataLong,dataLat,((U100*sigma100*V100')/1000)','EdgeColor','none')
+surf(dataLong,dataLat,(U100*sigma100*V100'/1000)','EdgeColor','none')
 colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD (n=100)');
 xlabel('Longitude');
@@ -193,7 +194,7 @@ grid
 figure(6)
 Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
 %contour(dataLong,dataLat,(U100*sigma100*V100'/1000)', Levels)
-contour(dataLong,dataLat,((U100*sigma100*V100')/1000)')
+contour(dataLong,dataLat,(U100*sigma100*V100'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=100)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');

@@ -58,3 +58,7 @@ u = u_new;
 end
 
 v_i = u_new;
+
+figure(2)
+semilogy(1:50, trimdata(k, [50 1]), 'k-');
+grid
