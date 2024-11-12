@@ -1,7 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1731443185.01411 "project.tex" "project.pdf" "project" 1731443185.77856 0
+["pdflatex"] 1731448939.695 "project.tex" "project.pdf" "project" 1731448940.43769 0
   "../figures/section1/contour.svg" 1731441397.07806 86170 f50cad55b9d5a779e570860f2e493f5e ""
   "../figures/section1/surf.svg" 1731441373.36806 149317 cb44ab2c2363c0fc5068db5b5de237d8 ""
+  "../figures/section2/vector_plot.svg" 1731448852.23783 38798 d2d83ad7d19b86fa3644c7331d4f9485 ""
   "../figures/section3/contour_10.svg" 1731425116.60531 3611390 ccd2415e8137bf55e0595743045f55d1 ""
   "../figures/section3/contour_100.svg" 1731425153.41197 3771827 8abaff0c76cb7c3c6cc8c50a4480af7f ""
   "../figures/section3/contour_50.svg" 1731425055.10864 2041073 4867d74f75757dc00bd2656f6724197d ""
@@ -48,6 +49,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1727349926 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1727349926 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1727349926 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1727349926 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1727349926 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1727349926 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1727349926 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
@@ -274,10 +276,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1727925999.5773 5312086 49e033e8d3948bcca48e0612d8828e70 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1727925976 7119910 2a0bb856dcadc2c4cd358136e12f6fa8 ""
-  "project.aux" 1731443185.68467 1720 65421b55662bc9da5b5157d38a58665e "pdflatex"
-  "project.out" 1731443185.68801 847 cd83414f228bcfbeec4eaa3be509fa07 "pdflatex"
-  "project.tex" 1731443183.60467 8628 093cfa0d70b4effe036ef43a386ae132 ""
-  "project.toc" 1731443185.68801 463 cf55aff9c0141c40aded688deb9a1a6f "pdflatex"
+  "project.aux" 1731448940.35116 1864 810d7d82ac69ee8871392d6006320a2b "pdflatex"
+  "project.out" 1731448940.35449 847 cd83414f228bcfbeec4eaa3be509fa07 "pdflatex"
+  "project.tex" 1731448937.96449 8801 103431e4a5c08c056d466269738d8a27 ""
+  "project.toc" 1731448940.35449 463 7f2ef97e58ffe42276f94a4539dee91c "pdflatex"
   "svg-inkscape/contour_100_svg-raw.pdf" 1731425418.30196 461324 c3d8ccb68174652f88fc563b6ff2bd1c ""
   "svg-inkscape/contour_10_svg-raw.pdf" 1731425425.0553 447170 6227b95ee7d2553c37813dbcc3e53867 ""
   "svg-inkscape/contour_50_svg-raw.pdf" 1731425421.0053 301464 8d36b489483775f0a67b821c2daa311f ""
@@ -289,6 +291,7 @@
   "svg-inkscape/surf_10_svg-raw.pdf" 1731425425.60196 71449 355866aad0900df7252282797dddd800 ""
   "svg-inkscape/surf_50_svg-raw.pdf" 1731425421.42863 79689 0682889ae46339b52db074ee6114d46d ""
   "svg-inkscape/surf_svg-raw.pdf" 1731442163.16804 112948 aeb3cd61356dc6b5cbb99b8474421259 ""
+  "svg-inkscape/vector_plot_svg-raw.pdf" 1731448939.51116 15242 20b033a8047c467c23932ac4b096f869 ""
   (generated)
   "project.aux"
   "project.log"

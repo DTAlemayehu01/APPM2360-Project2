@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.2)  12 NOV 2024 13:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.2)  12 NOV 2024 15:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -872,71 +872,76 @@ Package pdftex.def Info: ./svg-inkscape/contour_svg-raw.pdf  used on input line 
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/contour_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./svg-inkscape/spy_sigma_svg-raw.pdf, id=83, 421.575pt x 316.18124pt>
+<./svg-inkscape/vector_plot_svg-raw.pdf, id=83, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/vector_plot_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/vector_plot_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/vector_plot_svg-raw.pdf  used on input line 95.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+<./svg-inkscape/spy_sigma_svg-raw.pdf, id=84, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_sigma_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_sigma_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_sigma_svg-raw.pdf  used on input line 100.
+Package pdftex.def Info: ./svg-inkscape/spy_sigma_svg-raw.pdf  used on input line 105.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/spy_u_svg-raw.pdf, id=84, 421.575pt x 316.18124pt>
+<./svg-inkscape/spy_u_svg-raw.pdf, id=85, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_u_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_u_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_u_svg-raw.pdf  used on input line 107.
+Package pdftex.def Info: ./svg-inkscape/spy_u_svg-raw.pdf  used on input line 112.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/spy_vT_svg-raw.pdf, id=85, 421.575pt x 316.18124pt>
+<./svg-inkscape/spy_vT_svg-raw.pdf, id=86, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_vT_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_vT_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_vT_svg-raw.pdf  used on input line 114.
+Package pdftex.def Info: ./svg-inkscape/spy_vT_svg-raw.pdf  used on input line 119.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
- [3] [4{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./svg-inkscape/spy_sigma_svg-raw.pdf> <./svg-inkscape/spy_u_svg-raw.pdf
+ [3 <./svg-inkscape/vector_plot_svg-raw.pdf>] [4 <./svg-inkscape/spy_sigma_svg-raw.pdf> <./svg-inkscape/spy_u_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/spy_u_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./svg-inkscape/spy_vT_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/spy_vT_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./svg-inkscape/contour_100_svg-raw.pdf, id=131, 445.37093pt x 319.1925pt>
+<./svg-inkscape/contour_100_svg-raw.pdf, id=144, 445.37093pt x 319.1925pt>
 File: ./svg-inkscape/contour_100_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_100_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_100_svg-raw.pdf  used on input line 131.
+Package pdftex.def Info: ./svg-inkscape/contour_100_svg-raw.pdf  used on input line 136.
 (pdftex.def)             Requested size: 445.36984pt x 319.19171pt.
-<./svg-inkscape/surf_100_svg-raw.pdf, id=132, 421.575pt x 316.18124pt>
+<./svg-inkscape/surf_100_svg-raw.pdf, id=145, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/surf_100_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_100_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_100_svg-raw.pdf  used on input line 137.
+Package pdftex.def Info: ./svg-inkscape/surf_100_svg-raw.pdf  used on input line 142.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/contour_50_svg-raw.pdf, id=133, 441.60687pt x 319.1925pt>
+<./svg-inkscape/contour_50_svg-raw.pdf, id=146, 441.60687pt x 319.1925pt>
 File: ./svg-inkscape/contour_50_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_50_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_50_svg-raw.pdf  used on input line 148.
+Package pdftex.def Info: ./svg-inkscape/contour_50_svg-raw.pdf  used on input line 153.
 (pdftex.def)             Requested size: 441.60579pt x 319.19171pt.
-<./svg-inkscape/surf_50_svg-raw.pdf, id=134, 421.575pt x 316.18124pt>
+<./svg-inkscape/surf_50_svg-raw.pdf, id=147, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/surf_50_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_50_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_50_svg-raw.pdf  used on input line 154.
+Package pdftex.def Info: ./svg-inkscape/surf_50_svg-raw.pdf  used on input line 159.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/contour_10_svg-raw.pdf, id=135, 441.60687pt x 319.1925pt>
+<./svg-inkscape/contour_10_svg-raw.pdf, id=148, 441.60687pt x 319.1925pt>
 File: ./svg-inkscape/contour_10_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_10_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_10_svg-raw.pdf  used on input line 165.
+Package pdftex.def Info: ./svg-inkscape/contour_10_svg-raw.pdf  used on input line 170.
 (pdftex.def)             Requested size: 441.60579pt x 319.19171pt.
-<./svg-inkscape/surf_10_svg-raw.pdf, id=136, 421.575pt x 316.18124pt>
+<./svg-inkscape/surf_10_svg-raw.pdf, id=149, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/surf_10_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_10_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_10_svg-raw.pdf  used on input line 171.
+Package pdftex.def Info: ./svg-inkscape/surf_10_svg-raw.pdf  used on input line 176.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
- [5 <./svg-inkscape/contour_100_svg-raw.pdf> <./svg-inkscape/surf_100_svg-raw.pdf
+ [5{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./svg-inkscape/contour_100_svg-raw.pdf> <./svg-inkscape/surf_100_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_100_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./svg-inkscape/contour_50_svg-raw.pdf
-
-pdfTeX warning: pdflatex (file ./svg-inkscape/contour_50_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./svg-inkscape/surf_50_svg-raw.pdf
+>] [6 <./svg-inkscape/contour_50_svg-raw.pdf> <./svg-inkscape/surf_50_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_50_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [6 <./svg-inkscape/contour_10_svg-raw.pdf> <./svg-inkscape/surf_10_svg-raw.pdf
+> <./svg-inkscape/contour_10_svg-raw.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/contour_10_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/surf_10_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_10_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [7] [8] (./project.aux)
+>] [7] [8] [9] (./project.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -945,18 +950,18 @@ Package rerunfilecheck Info: File `project.out' has not changed.
 (rerunfilecheck)             Checksum: CD83414F228BCFBEEC4EAA3BE509FA07;847.
  ) 
 Here is how much of TeX's memory you used:
- 31758 strings out of 476047
- 623186 string characters out of 5792626
+ 31770 strings out of 476047
+ 623676 string characters out of 5792626
  2077187 words of memory out of 5000000
- 53104 multiletter control sequences out of 15000+600000
+ 53114 multiletter control sequences out of 15000+600000
  570454 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  102i,10n,107p,1170b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on project.pdf (9 pages, 8322297 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on project.pdf (10 pages, 8344567 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 106 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 401 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
