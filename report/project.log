@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.2)  12 NOV 2024 08:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.2)  12 NOV 2024 13:26
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -604,6 +604,8 @@ Package caption Info: New subtype `subtable' on input line 238.
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count311
 \cp@tempcnt=\count312
+) (/usr/share/texmf-dist/tex/latex/gensymb/gensymb.sty
+Package: gensymb 2022/10/17 v1.0.2 (KJH)
 ) (/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count313
@@ -645,10 +647,10 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip70
 \thanksmargin=\skip71
 \droptitle=\skip72
-) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
-
-(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+ (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -741,24 +743,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 ) (./project.aux)
 \openout1 = `project.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -820,17 +822,28 @@ Package caption Info: changepage package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \celsius on input line 56.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 56.
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 56.
+Package gensymb Info: Using \Omega for \ohm on input line 56.
+
+Package gensymb Warning: Not defining \micro.
+
 \c@lstlisting=\count344
-Package hyperref Info: Link coloring ON on input line 55.
- (./project.out) (./project.out)
+Package hyperref Info: Link coloring ON on input line 56.
+(./project.out) (./project.out)
 \@outlinefile=\write4
 \openout4 = `project.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -843,61 +856,75 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 \newpage
+l.62 \newpage
               [1]
-<./svg-inkscape/spy_sigma_svg-raw.pdf, id=50, 421.575pt x 316.18124pt>
+<./svg-inkscape/surf_svg-raw.pdf, id=52, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/surf_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/surf_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/surf_svg-raw.pdf  used on input line 74.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+<./svg-inkscape/contour_svg-raw.pdf, id=53, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/contour_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/contour_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/contour_svg-raw.pdf  used on input line 80.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+ [2 <./svg-inkscape/surf_svg-raw.pdf> <./svg-inkscape/contour_svg-raw.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/contour_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<./svg-inkscape/spy_sigma_svg-raw.pdf, id=83, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_sigma_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_sigma_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_sigma_svg-raw.pdf  used on input line 81.
+Package pdftex.def Info: ./svg-inkscape/spy_sigma_svg-raw.pdf  used on input line 100.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/spy_u_svg-raw.pdf, id=51, 421.575pt x 316.18124pt>
+<./svg-inkscape/spy_u_svg-raw.pdf, id=84, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_u_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_u_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_u_svg-raw.pdf  used on input line 88.
+Package pdftex.def Info: ./svg-inkscape/spy_u_svg-raw.pdf  used on input line 107.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/spy_vT_svg-raw.pdf, id=52, 421.575pt x 316.18124pt>
+<./svg-inkscape/spy_vT_svg-raw.pdf, id=85, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_vT_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_vT_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_vT_svg-raw.pdf  used on input line 95.
+Package pdftex.def Info: ./svg-inkscape/spy_vT_svg-raw.pdf  used on input line 114.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
- [2] [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./svg-inkscape/spy_sigma_svg-raw.pdf> <./svg-inkscape/spy_u_svg-raw.pdf
+ [3] [4{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./svg-inkscape/spy_sigma_svg-raw.pdf> <./svg-inkscape/spy_u_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/spy_u_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./svg-inkscape/spy_vT_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/spy_vT_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./svg-inkscape/contour_100_svg-raw.pdf, id=99, 445.37093pt x 319.1925pt>
+<./svg-inkscape/contour_100_svg-raw.pdf, id=131, 445.37093pt x 319.1925pt>
 File: ./svg-inkscape/contour_100_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_100_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_100_svg-raw.pdf  used on input line 112.
+Package pdftex.def Info: ./svg-inkscape/contour_100_svg-raw.pdf  used on input line 131.
 (pdftex.def)             Requested size: 445.36984pt x 319.19171pt.
-<./svg-inkscape/surf_100_svg-raw.pdf, id=100, 421.575pt x 316.18124pt>
+<./svg-inkscape/surf_100_svg-raw.pdf, id=132, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/surf_100_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_100_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_100_svg-raw.pdf  used on input line 118.
+Package pdftex.def Info: ./svg-inkscape/surf_100_svg-raw.pdf  used on input line 137.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/contour_50_svg-raw.pdf, id=101, 441.60687pt x 319.1925pt>
+<./svg-inkscape/contour_50_svg-raw.pdf, id=133, 441.60687pt x 319.1925pt>
 File: ./svg-inkscape/contour_50_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_50_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_50_svg-raw.pdf  used on input line 129.
+Package pdftex.def Info: ./svg-inkscape/contour_50_svg-raw.pdf  used on input line 148.
 (pdftex.def)             Requested size: 441.60579pt x 319.19171pt.
-<./svg-inkscape/surf_50_svg-raw.pdf, id=102, 421.575pt x 316.18124pt>
+<./svg-inkscape/surf_50_svg-raw.pdf, id=134, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/surf_50_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_50_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_50_svg-raw.pdf  used on input line 135.
+Package pdftex.def Info: ./svg-inkscape/surf_50_svg-raw.pdf  used on input line 154.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/contour_10_svg-raw.pdf, id=103, 441.60687pt x 319.1925pt>
+<./svg-inkscape/contour_10_svg-raw.pdf, id=135, 441.60687pt x 319.1925pt>
 File: ./svg-inkscape/contour_10_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_10_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_10_svg-raw.pdf  used on input line 146.
+Package pdftex.def Info: ./svg-inkscape/contour_10_svg-raw.pdf  used on input line 165.
 (pdftex.def)             Requested size: 441.60579pt x 319.19171pt.
-<./svg-inkscape/surf_10_svg-raw.pdf, id=104, 421.575pt x 316.18124pt>
+<./svg-inkscape/surf_10_svg-raw.pdf, id=136, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/surf_10_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_10_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_10_svg-raw.pdf  used on input line 152.
+Package pdftex.def Info: ./svg-inkscape/surf_10_svg-raw.pdf  used on input line 171.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
- [4 <./svg-inkscape/contour_100_svg-raw.pdf> <./svg-inkscape/surf_100_svg-raw.pdf
+ [5 <./svg-inkscape/contour_100_svg-raw.pdf> <./svg-inkscape/surf_100_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_100_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./svg-inkscape/contour_50_svg-raw.pdf
@@ -906,30 +933,30 @@ pdfTeX warning: pdflatex (file ./svg-inkscape/contour_50_svg-raw.pdf): PDF inclu
 > <./svg-inkscape/surf_50_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_50_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [5 <./svg-inkscape/contour_10_svg-raw.pdf> <./svg-inkscape/surf_10_svg-raw.pdf
+>] [6 <./svg-inkscape/contour_10_svg-raw.pdf> <./svg-inkscape/surf_10_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_10_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [6] (./project.aux)
+>] [7] [8] (./project.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `project.out' has not changed.
-(rerunfilecheck)             Checksum: 01AC77DC387F92E5269E62C29400B8A4;831.
+(rerunfilecheck)             Checksum: CD83414F228BCFBEEC4EAA3BE509FA07;847.
  ) 
 Here is how much of TeX's memory you used:
- 31318 strings out of 476047
- 617891 string characters out of 5792626
- 1932187 words of memory out of 5000000
- 52757 multiletter control sequences out of 15000+600000
- 570286 words of font info for 82 fonts, out of 8000000 for 9000
+ 31758 strings out of 476047
+ 623186 string characters out of 5792626
+ 2077187 words of memory out of 5000000
+ 53104 multiletter control sequences out of 15000+600000
+ 570454 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 102i,10n,107p,1170b,653s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on project.pdf (7 pages, 8111907 bytes).
+ 102i,10n,107p,1170b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on project.pdf (9 pages, 8322297 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

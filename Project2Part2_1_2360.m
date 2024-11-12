@@ -38,20 +38,32 @@ colorbar;
 %% 2.1.2
 
 % Finding Maximal Depth
-Min= min(Z, [], 'all');
-for i=1:length(Z)
-    for j=1:width(Z)
-        if Z(i,j) == Min
-            break
-        end
-    end
-end
 
-maxDepthLatitude = j;
-maxDepthLongitude = i;
-maxDepthLongitude
-maxDepthLatitude
-Min
+%
+% Incorrect Code (returns incorrect lat/long
+%
+% Min= min(Z, [], 'all');
+% for i=1:length(Z)
+%     for j=1:width(Z)
+%         if Z(i,j) == Min
+%             break
+%         end
+%     end
+% end
+% 
+% maxDepthLatitude = j;
+% maxDepthLongitude = i;
+% maxDepthLongitude;
+% maxDepthLatitude;
+% Min;
+% Z(maxDepthLongitude, maxDepthLatitude);
+
+[Min2, I] = min(Z, [], 'all');
+[MinLong, MinLat] = ind2sub([1440 1320], I);
+Min2
+Z(MinLong, MinLat)
+X(MinLat)
+Y(MinLong)
 
 %% 2.1.3
 

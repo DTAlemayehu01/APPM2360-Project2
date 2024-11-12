@@ -18,6 +18,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{changepage}
+\usepackage{gensymb}
 \allowdisplaybreaks
 \doublespacing
 
@@ -64,9 +65,27 @@ We are interested in analyzing and understading the layout of the Mariana Trench
 However, we have a large amount of data to work with so we'll need to work to create an approximation of the trench such that we can still have an accurate picture of the trench to better analyze while utilizing less data and memory to do so. 
 \section{Inital Trench Investigations}
 In order to better understand reducing the trench data we'll take a subset of it and operate on it as normal.
-Utilizing Matlab's Contour and Surface Plots we can get a good picture of the trench below.
-We can also find that the maximum depth of the trench is... at lattitude longitude....?
-We can also find that the average depth of the trench is given to be...
+Utilizing Matlab's Contour and Surface Plots we can get a good picture of the trench below from our data subset.
+\begin{figure}[H]
+    \begin{adjustwidth}{-1in}{-1in}
+    \centering
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section1/surf}
+        \label{fig:1a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section1/contour}
+        \label{fig:1b}
+    \end{subfigure}
+    \caption{Code in Appendix \ref{appendix:A}}
+    \label{fig:1}
+    \end{adjustwidth}
+\end{figure}
+We can also find that the maximum depth of the trench is -10.93 km at lattitude \(13.2\degree\) longitude \(140.3\degree\) (calculated in Appendix \ref{appendix:A}).
+In addition, in our data subset can also find that the average depth of the trench below sea level is given to be -7.2048 km (calculated in Appendix \ref{appendix:A}).
 \section{Eigenvalue Computation}
 We can find an eigenvectors associated with our matrix using an algorithm outlined in (appendix w/ matlab code + algorithm overview). \
 The reason this algorithm works can be explained as follows:
@@ -164,6 +183,95 @@ The maxxes and mins appear below.
 I have no idea what to put here...
 \pagebreak
 \begin{appendices}
-    \section{Placeholder} \label{appendix:A}
+\section{Figure \ref{fig:1} Code} \label{appendix:A}
+The following code is in MATLAB syntax:
+\begin{spacing}{1}
+\begin{lstlisting}
+clc
+clear
+close all
+
+%% Part 2.1 - Samuel H. Meyn
+
+%% 2.1.1
+%
+% Data Plots
+%
+
+%Import all data
+Z = importdata('mariana_depth.csv');
+Y = importdata('mariana_longitude.csv');
+X = importdata('mariana_latitude.csv');
+Z = transpose(Z);
+Zkm = Z .* 1/1000;
+
+figure(1)
+
+Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
+contour(Y, X, Zkm, Levels)
+title('Mariana Depth along Latitude and Longitude');
+xlabel('Longnitude (deg)');
+ylabel('Latitude (deg)');
+cb = contourcbar("eastoutside");
+cb.XLabel.String = "Elevation (km)";
+
+figure(2)
+
+surf(Y,X,Zkm, 'EdgeColor','none')
+title('Mariana Depth along Latitude and Longitude');
+xlabel('Longnitude (deg)');
+ylabel('Latitude(deg)');
+zlabel('Elevation (meters)');
+colorbar;
+
+%% 2.1.2
+
+% Finding Maximal Depth
+
+%
+% Incorrect Code (returns incorrect lat/long
+%
+% Min= min(Z, [], 'all');
+% for i=1:length(Z)
+%     for j=1:width(Z)
+%         if Z(i,j) == Min
+%             break
+%         end
+%     end
+% end
+% 
+% maxDepthLatitude = j;
+% maxDepthLongitude = i;
+% maxDepthLongitude;
+% maxDepthLatitude;
+% Min;
+% Z(maxDepthLongitude, maxDepthLatitude);
+
+[Min2, I] = min(Z, [], 'all');
+[MinLong, MinLat] = ind2sub([1440 1320], I);
+Min2
+Z(MinLong, MinLat)
+X(MinLat)
+Y(MinLong)
+
+%% 2.1.3
+
+% Mean depth sub -6km
+meanNum = 0;
+N = 0;
+
+for i=1:length(Z)
+    for j=1:width(Z)
+        if Z(i,j) < -6000
+            meanNum = meanNum + Z(i,j);
+            N = N + 1;
+        end
+    end
+end
+
+meanTrenchDepth = meanNum/N;
+meanTrenchDepth/1000
+\end{lstlisting}
+\end{spacing}
 \end{appendices}
 \end{document}

@@ -383,6 +383,8 @@ INPUT /usr/share/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/share/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/share/texmf-dist/tex/latex/changepage/changepage.sty
 INPUT /usr/share/texmf-dist/tex/latex/changepage/changepage.sty
+INPUT /usr/share/texmf-dist/tex/latex/gensymb/gensymb.sty
+INPUT /usr/share/texmf-dist/tex/latex/gensymb/gensymb.sty
 INPUT /usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
@@ -498,7 +500,22 @@ INPUT ./project.toc
 INPUT project.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT project.toc
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
+INPUT ../figures/section1/surf.svg
+INPUT ../figures/section1/surf.svg
+INPUT ../figures/section1/surf.svg
+INPUT ./svg-inkscape/surf_svg-raw.pdf
+INPUT ./svg-inkscape/surf_svg-raw.pdf
+INPUT ./svg-inkscape/surf_svg-raw.pdf
+INPUT ./svg-inkscape/surf_svg-raw.pdf
+INPUT ./svg-inkscape/surf_svg-raw.pdf
+INPUT ../figures/section1/contour.svg
+INPUT ../figures/section1/contour.svg
+INPUT ../figures/section1/contour.svg
+INPUT ./svg-inkscape/contour_svg-raw.pdf
+INPUT ./svg-inkscape/contour_svg-raw.pdf
+INPUT ./svg-inkscape/contour_svg-raw.pdf
+INPUT ./svg-inkscape/contour_svg-raw.pdf
+INPUT ./svg-inkscape/contour_svg-raw.pdf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -516,6 +533,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT ../figures/section3/spy_sigma.svg
 INPUT ../figures/section3/spy_sigma.svg
 INPUT ../figures/section3/spy_sigma.svg
@@ -599,6 +617,7 @@ INPUT ./svg-inkscape/surf_10_svg-raw.pdf
 INPUT ./svg-inkscape/surf_10_svg-raw.pdf
 INPUT ./svg-inkscape/surf_10_svg-raw.pdf
 INPUT ./svg-inkscape/surf_10_svg-raw.pdf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT project.aux
 INPUT ./project.out
 INPUT ./project.out
@@ -610,5 +629,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
