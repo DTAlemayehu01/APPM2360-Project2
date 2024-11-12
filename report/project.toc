@@ -1,2 +1,6 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
-\contentsline {section}{\numberline {2}Conclusion}{2}{section.2}%
+\contentsline {section}{\numberline {2}Inital Trench Investigations}{2}{section.2}%
+\contentsline {section}{\numberline {3}Eigenvalue Computation}{2}{section.3}%
+\contentsline {section}{\numberline {4}SVD Incomplete Decomposition}{2}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{5}{section.5}%
+\contentsline {section}{\numberline {A}Placeholder}{6}{appendix.a.A}%

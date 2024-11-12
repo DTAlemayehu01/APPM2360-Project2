@@ -48,7 +48,7 @@ breaklines=true
 \huge Project 2 - Analyzing The Mariana Trench \\
 \rule{\linewidth}{2pt}  \\[10pt]
 }
-\date{October 08, 2024}
+\date{November 12, 2024}
 \author{Daniel Alemayehu, Eli Grundberg, Sam Meyn}
 
 
@@ -60,8 +60,110 @@ breaklines=true
 \tableofcontents
 \newpage
 \section{Introduction}
+We are interested in analyzing and understading the layout of the Mariana Trench. 
+However, we have a large amount of data to work with so we'll need to work to create an approximation of the trench such that we can still have an accurate picture of the trench to better analyze while utilizing less data and memory to do so. 
 \section{Inital Trench Investigations}
+In order to better understand reducing the trench data we'll take a subset of it and operate on it as normal.
+Utilizing Matlab's Contour and Surface Plots we can get a good picture of the trench below.
+We can also find that the maximum depth of the trench is... at lattitude longitude....?
+We can also find that the average depth of the trench is given to be...
 \section{Eigenvalue Computation}
+We can find an eigenvectors associated with our matrix using an algorithm outlined in (appendix w/ matlab code + algorithm overview). \
+The reason this algorithm works can be explained as follows:
+We can also apply \textit{Gram-Schmidt Orthogonalization} to find eigenvectors as well which we'll for for the 50 largest eigenvectors (code appendix).
 \section{SVD Incomplete Decomposition}
+After completing our Incomplete SVD Decomposition (where \(U,V\) have 50 columns) our spy output looks like the following:
+\begin{figure}[H]
+    \begin{adjustwidth}{-1in}{-1in}
+    \centering
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/spy_sigma}
+        \caption{\(\mathbf{\Sigma}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/spy_u}
+        \caption{\(\mathbf{U}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/spy_vT}
+        \caption{\(\mathbf{V^T}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \end{adjustwidth}
+\end{figure}
+As one method for comparing the efficiency of the Incomplete SVD vs the full matrix of trench data we can compare the total number of entries and the total number of nonzero entries.
+\begin{itemize}
+    \item For the number of total entries, our matrix has 7.39\% of the number of total matrix entries as matrix \(\vb{A}\).
+    \item For the number of nonzero entries, our matrix has 7.26\% of the number of nonzero entries as matrix \(\vb{A}\).
+\end{itemize}
+We've made plots of several SVD decompositions with varying column counts (10, 50, 100) which appear below.
+\begin{figure}[H]
+    \centering
+    \begin{adjustwidth}{-1in}{-1in}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_100}
+        \caption{\(\mathbf{\Sigma}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_100}
+        \caption{\(\mathbf{\Sigma}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \end{adjustwidth}
+\end{figure}
+\begin{figure}[H]
+    \begin{adjustwidth}{-1in}{-1in}
+    \centering
+    \begin{subfigure}[b]{0.60\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_50}
+        \caption{\(\mathbf{\Sigma}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.60\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_50}
+        \caption{\(\mathbf{\Sigma}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \end{adjustwidth}
+\end{figure}
+\begin{figure}[H]
+    \begin{adjustwidth}{-1in}{-1in}
+    \centering
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_10}
+        \caption{\(\mathbf{\Sigma}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \centering
+        \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_10}
+        \caption{\(\mathbf{\Sigma}\) Matrix}
+        %\label{fig:4a}
+    \end{subfigure}
+    \end{adjustwidth}
+\end{figure}
+These look approximate to the original data? 
+The maxxes and mins appear below.
+\begin{itemize}
+    \item Lorem Ipsum
+\end{itemize}
 \section{Conclusion}
+I have no idea what to put here...
+\pagebreak
+\begin{appendices}
+    \section{Placeholder} \label{appendix:A}
+\end{appendices}
 \end{document}

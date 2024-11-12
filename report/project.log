@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.2)  12 NOV 2024 04:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.2)  12 NOV 2024 08:37
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **project.tex
@@ -541,7 +541,21 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ) (/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (/usr/share/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (/usr/share/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+ (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)) (/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "project.w18")...executed.
+
+ (./project.w18)
+runsystem(rm -- "project.w18")...executed.
+
 )
 \c@svg@param@lastpage=\count304
 \svg@box=\box70
@@ -633,7 +647,8 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \droptitle=\skip72
 ) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
- (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+
+(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -641,8 +656,7 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 ) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+) (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
@@ -830,27 +844,92 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.61 \newpage
-              [1] [2] (./project.aux)
+              [1]
+<./svg-inkscape/spy_sigma_svg-raw.pdf, id=50, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/spy_sigma_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spy_sigma_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/spy_sigma_svg-raw.pdf  used on input line 81.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+<./svg-inkscape/spy_u_svg-raw.pdf, id=51, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/spy_u_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spy_u_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/spy_u_svg-raw.pdf  used on input line 88.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+<./svg-inkscape/spy_vT_svg-raw.pdf, id=52, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/spy_vT_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spy_vT_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/spy_vT_svg-raw.pdf  used on input line 95.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+ [2] [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./svg-inkscape/spy_sigma_svg-raw.pdf> <./svg-inkscape/spy_u_svg-raw.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/spy_u_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/spy_vT_svg-raw.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/spy_vT_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<./svg-inkscape/contour_100_svg-raw.pdf, id=99, 445.37093pt x 319.1925pt>
+File: ./svg-inkscape/contour_100_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/contour_100_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/contour_100_svg-raw.pdf  used on input line 112.
+(pdftex.def)             Requested size: 445.36984pt x 319.19171pt.
+<./svg-inkscape/surf_100_svg-raw.pdf, id=100, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/surf_100_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/surf_100_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/surf_100_svg-raw.pdf  used on input line 118.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+<./svg-inkscape/contour_50_svg-raw.pdf, id=101, 441.60687pt x 319.1925pt>
+File: ./svg-inkscape/contour_50_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/contour_50_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/contour_50_svg-raw.pdf  used on input line 129.
+(pdftex.def)             Requested size: 441.60579pt x 319.19171pt.
+<./svg-inkscape/surf_50_svg-raw.pdf, id=102, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/surf_50_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/surf_50_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/surf_50_svg-raw.pdf  used on input line 135.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+<./svg-inkscape/contour_10_svg-raw.pdf, id=103, 441.60687pt x 319.1925pt>
+File: ./svg-inkscape/contour_10_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/contour_10_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/contour_10_svg-raw.pdf  used on input line 146.
+(pdftex.def)             Requested size: 441.60579pt x 319.19171pt.
+<./svg-inkscape/surf_10_svg-raw.pdf, id=104, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/surf_10_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/surf_10_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/surf_10_svg-raw.pdf  used on input line 152.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+ [4 <./svg-inkscape/contour_100_svg-raw.pdf> <./svg-inkscape/surf_100_svg-raw.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/surf_100_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/contour_50_svg-raw.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/contour_50_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/surf_50_svg-raw.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/surf_50_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [5 <./svg-inkscape/contour_10_svg-raw.pdf> <./svg-inkscape/surf_10_svg-raw.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/surf_10_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [6] (./project.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `project.out' has not changed.
-(rerunfilecheck)             Checksum: 9FBA2432BF8A4F5808E3A3996573F529;196.
+(rerunfilecheck)             Checksum: 01AC77DC387F92E5269E62C29400B8A4;831.
  ) 
 Here is how much of TeX's memory you used:
- 31011 strings out of 476047
- 609822 string characters out of 5792626
- 1929187 words of memory out of 5000000
- 52492 multiletter control sequences out of 15000+600000
- 562778 words of font info for 54 fonts, out of 8000000 for 9000
+ 31318 strings out of 476047
+ 617891 string characters out of 5792626
+ 1932187 words of memory out of 5000000
+ 52757 multiletter control sequences out of 15000+600000
+ 570286 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 102i,6n,107p,1170b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on project.pdf (3 pages, 50397 bytes).
+ 102i,10n,107p,1170b,653s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on project.pdf (7 pages, 8111907 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
