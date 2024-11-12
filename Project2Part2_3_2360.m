@@ -35,11 +35,22 @@ end
 
 [sigma] = eig(A*A_T, "matrix");
 sigma = sqrt(sigma);
+sigma = trimdata(sigma, [50 50]);
 
 U = [];
 for i = 1:50
     U(:,i) = A*V(:,i)/sigma(i,i);
 end
+
+figure(11)
+spy(sigma)
+grid
+figure(12)
+spy(U)
+grid
+figure(13)
+spy(V')
+grid
 
 %
 % PART 2: SVD Efficacy for 50 columns of U, V
@@ -58,7 +69,7 @@ nnz_efficiency
 % PART 3: Image/Contour Map
 %
 figure(1)
-surf(dataLong,dataLat,(U*V'/1000)','EdgeColor','none')
+surf(dataLong,dataLat,(U*sigma*V'/1000)','EdgeColor','none')
 colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
 xlabel('Longitude (degrees)');
@@ -67,7 +78,7 @@ zlabel('Elevation (meters)');
 grid
 
 figure(2)
-contour(dataLong,dataLat,(U*V'/1000)')
+contour(dataLong,dataLat,(U*sigma*V'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
@@ -108,6 +119,7 @@ end
 [sigma10] = eig(A*A_T, "matrix");
 
 sigma10 = sqrt(sigma10);
+sigma10 = trimdata(sigma,[10,10]);
 
 U10 = [];
 for i = 1:10
@@ -115,7 +127,7 @@ for i = 1:10
 end
 
 figure(3)
-surf(dataLong,dataLat,(U10*V10'/1000)','EdgeColor','none')
+surf(dataLong,dataLat,(U10*sigma10*V10'/1000)','EdgeColor','none')
 colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
 xlabel('Longitude');
@@ -124,7 +136,7 @@ zlabel('Elevation (meters)');
 grid
 
 figure(4)
-contour(dataLong,dataLat,(U10*V10'/1000)')
+contour(dataLong,dataLat,(U10*sigma10*V10'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
@@ -161,6 +173,7 @@ end
 [sigma100] = eig(A*A_T, "matrix");
 
 sigma100 = sqrt(sigma100);
+sigma100 = trimdata(sigma100,[100 100]);
 
 U100 = [];
 for i = 1:100
@@ -168,7 +181,7 @@ for i = 1:100
 end
 
 figure(5)
-surf(dataLong,dataLat,(U100*V100'/1000)','EdgeColor','none')
+surf(dataLong,dataLat,(U100*sigma100*V100'/1000)','EdgeColor','none')
 colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD (n=100)');
 xlabel('Longitude');
@@ -177,7 +190,7 @@ zlabel('Elevation (meters)');
 grid
 
 figure(6)
-contour(dataLong,dataLat,(U100*V100'/1000)')
+contour(dataLong,dataLat,(U100*sigma100*V100'/1000)')
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=100)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
