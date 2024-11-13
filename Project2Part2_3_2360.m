@@ -33,14 +33,38 @@ for i = 1:50
     V(:,i) = u_new;
 end
 
-[sigma] = eig(A_T*A, "matrix");
+sigma = [50 50];
+for i = 1:50
+    sigma(i,i) = V(:,i)'*A_T*A*V(:,i);
+end
 sigma = sqrt(sigma);
-sigma = trimdata(sigma, [50 50]);
 
 U = [];
 for i = 1:50
     U(:,i) = A*V(:,i)/sigma(i,i);
 end
+
+[Min2, I] = min(U*sigma*V'/1000, [], 'all');
+[MinLat, MinLong] = ind2sub([1440 1320], I);
+Min2
+dataLat(MinLat)
+dataLong(MinLong)
+
+meanNum = 0;
+N = 0;
+
+TEMP = U*sigma*V'/1000;
+for i=1:1320
+    for j=1:1440
+        if TEMP(i,j) < -6
+            meanNum = meanNum + TEMP(i,j);
+            N = N + 1;
+        end
+    end
+end
+
+meanTrenchDepth = meanNum/N;
+meanTrenchDepth
 
 figure(11)
 spy(sigma)
@@ -117,15 +141,39 @@ for i = 1:10
     V10(:,i) = u_new';
 end
 
-[sigma10] = eig(A_T*A, "matrix");
-
+sigma10 = [10 10];
+for i = 1:10
+    sigma10(i,i) = V10(:,i)'*A_T*A*V10(:,i);
+end
 sigma10 = sqrt(sigma10);
-sigma10 = trimdata(sigma,[10,10]);
 
 U10 = [];
 for i = 1:10
     U10(:,i) = A*V10(:,i)/sigma10(i,i);
 end
+
+[Min2, I] = min(U10*sigma10*V10'/1000, [], 'all');
+[MinLat, MinLong] = ind2sub([1440 1320], I);
+Min2
+dataLat(MinLat)
+dataLong(MinLong)
+
+meanNum = 0;
+N = 0;
+
+TEMP = U10*sigma10*V10'/1000;
+for i=1:1320
+    for j=1:1440
+        if TEMP(i,j) < -6
+            meanNum = meanNum + TEMP(i,j);
+            N = N + 1;
+        end
+    end
+end
+
+meanTrenchDepth = meanNum/N;
+meanTrenchDepth
+
 
 figure(3)
 surf(dataLong,dataLat,((U10*sigma10*V10')/1000)','EdgeColor','none')
@@ -172,15 +220,38 @@ for i = 1:100
     V100(:,i) = u_new';
 end
 
-[sigma100] = eig(A_T*A, "matrix");
-
+sigma100 = [100 100];
+for i = 1:100
+    sigma100(i,i) = V100(:,i)'*A_T*A*V100(:,i);
+end
 sigma100 = sqrt(sigma100);
-sigma100 = trimdata(sigma100,[100 100]);
 
 U100 = [];
 for i = 1:100
     U100(:,i) = A*V100(:,i)/sigma100(i,i);
 end
+
+[Min2, I] = min(U100*sigma100*V100'/1000, [], 'all');
+[MinLat, MinLong] = ind2sub([1440 1320], I);
+Min2
+dataLat(MinLat)
+dataLong(MinLong)
+
+meanNum = 0;
+N = 0;
+
+TEMP = U100*sigma100*V100'/1000;
+for i=1:1320
+    for j=1:1440
+        if TEMP(i,j) < -6
+            meanNum = meanNum + TEMP(i,j);
+            N = N + 1;
+        end
+    end
+end
+
+meanTrenchDepth = meanNum/N;
+meanTrenchDepth
 
 figure(5)
 surf(dataLong,dataLat,((U100*sigma100*V100')/1000)','EdgeColor','none')
