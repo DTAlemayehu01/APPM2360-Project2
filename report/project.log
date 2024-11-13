@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.2)  12 NOV 2024 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.10.2)  12 NOV 2024 18:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -848,7 +848,32 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./project.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./project.toc
+
+LaTeX Warning: Reference `fig:4' on page 1 undefined on input line 8.
+
+
+Package caption Warning: \label without proper reference on input line 155.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:5' on page 1 undefined on input line 8.
+
+
+Package caption Warning: \label without proper reference on input line 174.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:6' on page 1 undefined on input line 8.
+
+
+Package caption Warning: \label without proper reference on input line 192.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:7' on page 1 undefined on input line 8.
+
+)
 \tf@toc=\write5
 \openout5 = `project.toc'.
 
@@ -858,12 +883,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.62 \newpage
               [1]
-<./svg-inkscape/surf_svg-raw.pdf, id=52, 421.575pt x 316.18124pt>
+<./svg-inkscape/surf_svg-raw.pdf, id=72, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/surf_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/surf_svg-raw.pdf  used on input line 74.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/contour_svg-raw.pdf, id=53, 421.575pt x 316.18124pt>
+<./svg-inkscape/contour_svg-raw.pdf, id=73, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/contour_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/contour_svg-raw.pdf  used on input line 80.
@@ -872,67 +897,76 @@ Package pdftex.def Info: ./svg-inkscape/contour_svg-raw.pdf  used on input line 
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/contour_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./svg-inkscape/vector_plot_svg-raw.pdf, id=83, 421.575pt x 316.18124pt>
+
+LaTeX Warning: Reference `appendx:B' on page 3 undefined on input line 90.
+
+<./svg-inkscape/vector_plot_svg-raw.pdf, id=103, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/vector_plot_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/vector_plot_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/vector_plot_svg-raw.pdf  used on input line 95.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/spy_sigma_svg-raw.pdf, id=84, 421.575pt x 316.18124pt>
+<./svg-inkscape/value_plot_svg-raw.pdf, id=104, 421.575pt x 316.18124pt>
+File: ./svg-inkscape/value_plot_svg-raw.pdf Graphic file (type pdf)
+<use ./svg-inkscape/value_plot_svg-raw.pdf>
+Package pdftex.def Info: ./svg-inkscape/value_plot_svg-raw.pdf  used on input line 103.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+[3 <./svg-inkscape/vector_plot_svg-raw.pdf>]
+<./svg-inkscape/spy_sigma_svg-raw.pdf, id=122, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_sigma_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_sigma_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_sigma_svg-raw.pdf  used on input line 105.
+Package pdftex.def Info: ./svg-inkscape/spy_sigma_svg-raw.pdf  used on input line 114.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/spy_u_svg-raw.pdf, id=85, 421.575pt x 316.18124pt>
+<./svg-inkscape/spy_u_svg-raw.pdf, id=123, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_u_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_u_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_u_svg-raw.pdf  used on input line 112.
+Package pdftex.def Info: ./svg-inkscape/spy_u_svg-raw.pdf  used on input line 121.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/spy_vT_svg-raw.pdf, id=86, 421.575pt x 316.18124pt>
+<./svg-inkscape/spy_vT_svg-raw.pdf, id=124, 421.575pt x 316.18124pt>
 File: ./svg-inkscape/spy_vT_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/spy_vT_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/spy_vT_svg-raw.pdf  used on input line 119.
+Package pdftex.def Info: ./svg-inkscape/spy_vT_svg-raw.pdf  used on input line 128.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
- [3 <./svg-inkscape/vector_plot_svg-raw.pdf>] [4 <./svg-inkscape/spy_sigma_svg-raw.pdf> <./svg-inkscape/spy_u_svg-raw.pdf
+ [4 <./svg-inkscape/value_plot_svg-raw.pdf>] [5{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./svg-inkscape/spy_sigma_svg-raw.pdf> <./svg-inkscape/spy_u_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/spy_u_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./svg-inkscape/spy_vT_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/spy_vT_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<./svg-inkscape/contour_100_svg-raw.pdf, id=144, 445.37093pt x 319.1925pt>
+<./svg-inkscape/contour_100_svg-raw.pdf, id=182, 483.30562pt x 369.63094pt>
 File: ./svg-inkscape/contour_100_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_100_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_100_svg-raw.pdf  used on input line 136.
-(pdftex.def)             Requested size: 445.36984pt x 319.19171pt.
-<./svg-inkscape/surf_100_svg-raw.pdf, id=145, 421.575pt x 316.18124pt>
+Package pdftex.def Info: ./svg-inkscape/contour_100_svg-raw.pdf  used on input line 146.
+(pdftex.def)             Requested size: 483.30444pt x 369.63002pt.
+<./svg-inkscape/surf_100_svg-raw.pdf, id=183, 495.35063pt x 365.86688pt>
 File: ./svg-inkscape/surf_100_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_100_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_100_svg-raw.pdf  used on input line 142.
-(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/contour_50_svg-raw.pdf, id=146, 441.60687pt x 319.1925pt>
+Package pdftex.def Info: ./svg-inkscape/surf_100_svg-raw.pdf  used on input line 151.
+(pdftex.def)             Requested size: 495.34943pt x 365.86598pt.
+<./svg-inkscape/contour_50_svg-raw.pdf, id=186, 477.28313pt x 315.42844pt>
 File: ./svg-inkscape/contour_50_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_50_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_50_svg-raw.pdf  used on input line 153.
-(pdftex.def)             Requested size: 441.60579pt x 319.19171pt.
-<./svg-inkscape/surf_50_svg-raw.pdf, id=147, 421.575pt x 316.18124pt>
+Package pdftex.def Info: ./svg-inkscape/contour_50_svg-raw.pdf  used on input line 163.
+(pdftex.def)             Requested size: 477.28195pt x 315.42766pt.
+<./svg-inkscape/surf_50_svg-raw.pdf, id=187, 505.89pt x 352.31625pt>
 File: ./svg-inkscape/surf_50_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_50_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_50_svg-raw.pdf  used on input line 159.
-(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-<./svg-inkscape/contour_10_svg-raw.pdf, id=148, 441.60687pt x 319.1925pt>
+Package pdftex.def Info: ./svg-inkscape/surf_50_svg-raw.pdf  used on input line 169.
+(pdftex.def)             Requested size: 505.88875pt x 352.31538pt.
+<./svg-inkscape/contour_10_svg-raw.pdf, id=190, 470.50781pt x 330.48468pt>
 File: ./svg-inkscape/contour_10_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/contour_10_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/contour_10_svg-raw.pdf  used on input line 170.
-(pdftex.def)             Requested size: 441.60579pt x 319.19171pt.
-<./svg-inkscape/surf_10_svg-raw.pdf, id=149, 421.575pt x 316.18124pt>
+Package pdftex.def Info: ./svg-inkscape/contour_10_svg-raw.pdf  used on input line 182.
+(pdftex.def)             Requested size: 470.50665pt x 330.48387pt.
+<./svg-inkscape/surf_10_svg-raw.pdf, id=191, 494.59781pt x 342.5297pt>
 File: ./svg-inkscape/surf_10_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/surf_10_svg-raw.pdf>
-Package pdftex.def Info: ./svg-inkscape/surf_10_svg-raw.pdf  used on input line 176.
-(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
- [5{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./svg-inkscape/contour_100_svg-raw.pdf> <./svg-inkscape/surf_100_svg-raw.pdf
+Package pdftex.def Info: ./svg-inkscape/surf_10_svg-raw.pdf  used on input line 187.
+(pdftex.def)             Requested size: 494.59659pt x 342.52885pt.
+ [6 <./svg-inkscape/contour_100_svg-raw.pdf> <./svg-inkscape/surf_100_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_100_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [6 <./svg-inkscape/contour_50_svg-raw.pdf> <./svg-inkscape/surf_50_svg-raw.pdf
+>] [7 <./svg-inkscape/contour_50_svg-raw.pdf> <./svg-inkscape/surf_50_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_50_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./svg-inkscape/contour_10_svg-raw.pdf
@@ -941,27 +975,176 @@ pdfTeX warning: pdflatex (file ./svg-inkscape/contour_10_svg-raw.pdf): PDF inclu
 > <./svg-inkscape/surf_10_svg-raw.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/surf_10_svg-raw.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [7] [8] [9] (./project.aux)
+>] [8] [9] [10] [11] [12]
+
+LaTeX Warning: Reference `fig:4' on page 13 undefined on input line 364.
+
+
+Package caption Warning: \label without proper reference on input line 155.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:5' on page 13 undefined on input line 364.
+
+
+Package caption Warning: \label without proper reference on input line 174.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:6' on page 13 undefined on input line 364.
+
+
+Package caption Warning: \label without proper reference on input line 192.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:7' on page 13 undefined on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@refundefined' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@family' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@series' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@shape' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delayed@f@adjustment' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@refundefined' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@family' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@series' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@shape' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delayed@f@adjustment' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@refundefined' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@family' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@series' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\f@shape' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 364.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delayed@f@adjustment' on input line 364.
+
+[13] [14] [15] [16] [17] (./project.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `project.out' has not changed.
-(rerunfilecheck)             Checksum: CD83414F228BCFBEEC4EAA3BE509FA07;847.
+(rerunfilecheck)             Checksum: B7ACC3862C5E74CBC2F6F227AA4E6FC6;1191.
  ) 
 Here is how much of TeX's memory you used:
- 31770 strings out of 476047
- 623676 string characters out of 5792626
- 2077187 words of memory out of 5000000
- 53114 multiletter control sequences out of 15000+600000
- 570454 words of font info for 83 fonts, out of 8000000 for 9000
+ 32086 strings out of 476047
+ 628610 string characters out of 5792626
+ 2111187 words of memory out of 5000000
+ 53150 multiletter control sequences out of 15000+600000
+ 570623 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  102i,10n,107p,1170b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on project.pdf (10 pages, 8344567 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on project.pdf (18 pages, 7506790 bytes).
 PDF statistics:
- 401 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 108 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 806 PDF objects out of 1000 (max. 8388607)
+ 695 compressed objects within 7 object streams
+ 387 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

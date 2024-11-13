@@ -50,7 +50,7 @@ breaklines=true
 \rule{\linewidth}{2pt}  \\[10pt]
 }
 \date{November 12, 2024}
-\author{Daniel Alemayehu, Eli Grundberg, Sam Meyn}
+\author{Daniel Alemayehu, Eli Grundberg, Samuel Meyn}
 
 
 \begin{document}
@@ -87,16 +87,25 @@ Utilizing Matlab's Contour and Surface Plots we can get a good picture of the tr
 We can also find that the maximum depth of the trench is -10.93 km at lattitude \(13.2\degree\) longitude \(140.3\degree\) (calculated in Appendix \ref{appendix:A}).
 In addition, in our data subset can also find that the average depth of the trench below sea level is given to be -7.2048 km (calculated in Appendix \ref{appendix:A}).
 \section{Eigenvalue Computation}
-We can find an eigenvectors associated with our matrix using an algorithm outlined in (appendix w/ matlab code + algorithm overview). \
+We can find an eigenvectors associated with our matrix using an algorithm outlined in Appendix \ref{appendx:B}.
 The reason this algorithm works can be explained as follows:
-We can also apply \textit{Gram-Schmidt Orthogonalization} to find eigenvectors as well which we'll for for the 50 largest eigenvectors (code appendix).
+We use this algorithm to find the eigenvector associated with the largest eigenvalue, and then plot the components of the eigenvector as a function of the \(n\)th component.
 \begin{figure}[H]
     \centering
     \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section2/vector_plot}
-    \caption{Eigenvector \(V_1\) plot}
+    \caption{Eigenvector \(\vb{V_1}\) plot}
+    \label{fig:2}
+\end{figure}
+We can also apply \textit{Gram-Schmidt Orthogonalization} to find eigenvectors as well which we'll use for the 50 largest eigenvectors. 
+We plot the 50 largest eigenvalues associated with these eigenvectors:
+\begin{figure}[H]
+    \centering
+    \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section2/value_plot}
+    \caption{\(n\)th largest eigenvalue vs \(\ln(E_n)\) plot}
+    \label{fig:3}
 \end{figure}
 \section{SVD Incomplete Decomposition}
-After completing our Incomplete SVD Decomposition (where \(U,V\) have 50 columns) our spy output looks like the following:
+After completing our Incomplete SVD Decomposition (where \(\vb{U},\vb{V^T}\) have 50 columns) our \texttt{spy} output looks like the following:
 \begin{figure}[H]
     \begin{adjustwidth}{-1in}{-1in}
     \centering
@@ -122,7 +131,8 @@ After completing our Incomplete SVD Decomposition (where \(U,V\) have 50 columns
     \end{subfigure}
     \end{adjustwidth}
 \end{figure}
-As one method for comparing the efficiency of the Incomplete SVD vs the full matrix of trench data we can compare the total number of entries and the total number of nonzero entries.
+As one method for comparing the efficiency of the Incomplete SVD vs the full matrix of trench data we can compare the total number of entries and the total number of nonzero entries. 
+For our SVD up to the 50th eigenvalue we note the following:
 \begin{itemize}
     \item For the number of total entries, our matrix has 7.39\% of the number of total matrix entries as matrix \(\vb{A}\).
     \item For the number of nonzero entries, our matrix has 7.26\% of the number of nonzero entries as matrix \(\vb{A}\).
@@ -134,16 +144,16 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_100}
-        \caption{\(\mathbf{\Sigma}\) Matrix}
-        %\label{fig:4a}
+        \label{fig:5a}
     \end{subfigure}
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_100}
-        \caption{\(\mathbf{\Sigma}\) Matrix}
-        %\label{fig:4a}
+        \label{fig:5b}
     \end{subfigure}
     \end{adjustwidth}
+    \label{fig:5}
+    \caption{Code in Appendix \ref{appendix:C}}
 \end{figure}
 \begin{figure}[H]
     \begin{adjustwidth}{-1in}{-1in}
@@ -151,16 +161,18 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.60\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_50}
-        \caption{\(\mathbf{\Sigma}\) Matrix}
-        %\label{fig:4a}
+        \caption{Maximal Depth: km at Lattiude Longitude}
+        \label{fig:6a}
     \end{subfigure}
     \begin{subfigure}[b]{0.60\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_50}
-        \caption{\(\mathbf{\Sigma}\) Matrix}
-        %\label{fig:4a}
+        \caption{Average Depth Below Sea Level: km}
+        \label{fig:6b}
     \end{subfigure}
     \end{adjustwidth}
+    \label{fig:6}
+    \caption{Code in Appendix \ref{appendix:C}}
 \end{figure}
 \begin{figure}[H]
     \begin{adjustwidth}{-1in}{-1in}
@@ -168,24 +180,23 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_10}
-        \caption{\(\mathbf{\Sigma}\) Matrix}
-        %\label{fig:4a}
+        \label{fig:7a}
     \end{subfigure}
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_10}
         \caption{\(\mathbf{\Sigma}\) Matrix}
-        %\label{fig:4a}
+        \label{fig:7b}
     \end{subfigure}
     \end{adjustwidth}
+    \label{fig:7}
+    \caption{Code in Appendix \ref{appendix:C}}
 \end{figure}
-These look approximate to the original data? 
-The maxxes and mins appear below.
-\begin{itemize}
-    \item Lorem Ipsum
-\end{itemize}
+As we reduce the size of the \(\vb{\Sigma}, \vb{U}, \vb{V}\) matricies we notice that our graph appears to "smooth out". 
+Commonly, this is refered to as a lower resolution version of our original data.
+Additionally, we'll note that the incomplete SVD up to the 10th largest eigenvalue is far more noticable "low res" than the other two incomplete SVDs we provide which are far closer/more similar to our original data.
 \section{Conclusion}
-I have no idea what to put here...
+Efficacy of incomplete SVD decomposition in data representation and memory management.
 \pagebreak
 \begin{appendices}
 \section{Figure \ref{fig:1} Code} \label{appendix:A}
@@ -276,6 +287,286 @@ end
 
 meanTrenchDepth = meanNum/N;
 meanTrenchDepth/1000
+\end{lstlisting}
+\end{spacing}
+\pagebreak
+\section{Figure \ref{fig:2} and \ref{fig:3} Code} \label{appendix:B}
+The following code is in MATLAB syntax:
+\begin{spacing}{1}
+\begin{lstlisting}
+clear;
+clc;
+close all;
+
+A = readmatrix('mariana_depth.csv');
+%dataLat = readmatrix('mariana_latitude.csv');
+%dataLong = readmatrix('mariana_longitude.csv');
+
+
+%% Part 1
+tic
+%Transpose A
+A_T = A';
+%Create Unit vector
+n = 1;
+x = randn(n,1);
+x = x / norm(x);
+
+%Iterate until the unit vector for n+1 minus the previous unit vector
+%doesn't change
+for i = 1:10
+unit_x = A_T*A*x;
+unit_x = unit_x / (norm(unit_x));
+
+if  norm(unit_x - x) <= 0
+break;
+end
+
+x = unit_x;
+
+end
+%Show final eigenvalue and eigenvector
+eigen_final = x;
+k = eig(A'*A);
+x_n_vector = sqrt(sum(x^2));
+N = length(x);
+hold on;
+plot(1:N, x_n_vector, 'k-');
+toc
+%% Part 2
+
+v_50 = zeros(50,1);
+
+%Initialize a unit vector
+n = 1;
+u = randn(n,1);
+u = u / norm(u);
+% 
+for i = 1:50
+u_new_asterisk = A'*A*u;
+u_new = u_new_asterisk - sum((u_new_asterisk'*v_50(i)*v_50(i)));
+u_new = u_new / norm(u_new);
+if norm(u_new - u) < 0.002
+break;
+end
+
+u = u_new;
+end
+
+v_i = u_new;
+
+figure(2)
+semilogy(1:50, trimdata(k, [50 1]), 'k-');
+grid 
+\end{lstlisting}
+\end{spacing}
+\pagebreak
+\section{Figure \ref{fig:4}, \ref{fig:5}, \ref{fig:6}, \ref{fig:7} Code} \label{appendix:C}
+The following code is in MATLAB syntax:
+\begin{spacing}{1}
+\begin{lstlisting}
+clear;
+clc;
+close all;
+%
+% PART 1: Incomplete SVD Decomposition
+%
+A = readmatrix('mariana_depth.csv');
+dataLat = readmatrix('mariana_latitude.csv');
+dataLong = readmatrix('mariana_longitude.csv');
+
+A_T = A';
+
+V = zeros(1440, 50);
+
+n = 1440;
+u = randn(n,1);
+u = u / norm(u);
+
+for i = 1:50
+    while 1
+        u_new = A_T*A*u;
+        summation = 0;
+        for j = 1:i
+            summation = summation + (u_new'*V(:,j))*V(:,j);
+        end
+        u_new = u_new - summation;
+        u_new = u_new/norm(u_new);
+        if norm(u_new - u) < 0.001
+            break;
+        end
+        u = u_new;
+    end
+    V(:,i) = u_new;
+end
+
+[sigma] = eig(A_T*A, "matrix");
+sigma = sqrt(sigma);
+sigma = trimdata(sigma, [50 50]);
+
+U = [];
+for i = 1:50
+    U(:,i) = A*V(:,i)/sigma(i,i);
+end
+
+figure(11)
+spy(sigma)
+grid
+figure(12)
+spy(U)
+grid
+figure(13)
+spy(V')
+grid
+
+%
+% PART 2: SVD Efficacy for 50 columns of U, V
+%
+SVD_space = numel(sigma) + numel(U) + numel(V);
+A_space = numel(A);
+space_efficiency = SVD_space/A_space;
+space_efficiency
+
+SVD_nzs = nnz(sigma) + nnz(U) + nnz(V);
+A_nzs = nnz(A);
+nnz_efficiency = SVD_nzs/A_nzs;
+nnz_efficiency
+
+%
+% PART 3: Image/Contour Map
+%
+figure(1)
+surf(dataLong,dataLat,((U*sigma*V')/1000)','EdgeColor','none')
+colorbar
+title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
+xlabel('Longitude (degrees)');
+ylabel('Latitude (degrees)');
+zlabel('Elevation (km)');
+grid
+
+figure(2)
+Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
+contour(dataLong,dataLat,(U*sigma*V'/1000)', Levels)
+title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
+xlabel('Longitude (degrees)');
+ylabel('Latitude (degrees)');
+cb = contourcbar("eastoutside");
+cb.XLabel.String = "Elevation (km)";
+grid
+
+%
+% Part 4: U V column counts?
+%
+
+%
+% U, V with 10 columns
+%
+V10 = zeros(1440, 10);
+
+n = 1440;
+u = randn(n,1);
+u = u / norm(u);
+
+for i = 1:10
+    while 1
+        u_new = A_T*A*u;
+        summation = 0;
+        for j = 1:i
+            summation = summation + (u_new'*V10(:,j))*V10(:,j);
+        end
+        u_new = u_new - summation;
+        u_new = u_new/norm(u_new);
+        if norm(u_new - u) < 0.001
+            break;
+        end
+        u = u_new;
+    end
+    V10(:,i) = u_new';
+end
+
+[sigma10] = eig(A_T*A, "matrix");
+
+sigma10 = sqrt(sigma10);
+sigma10 = trimdata(sigma,[10,10]);
+
+U10 = [];
+for i = 1:10
+    U10(:,i) = A*V10(:,i)/sigma10(i,i);
+end
+
+figure(3)
+surf(dataLong,dataLat,((U10*sigma10*V10')/1000)','EdgeColor','none')
+colorbar
+title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
+xlabel('Longitude');
+ylabel('Latitude');
+zlabel('Elevation (km)');
+grid
+
+figure(4)
+Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
+contour(dataLong,dataLat,(U10*sigma10*V10'/1000)', Levels)
+title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
+xlabel('Longitude (degrees)');
+ylabel('Latitude (degrees)');
+cb = contourcbar("eastoutside");
+cb.XLabel.String = "Elevation (km)";
+grid
+
+% 
+% U, V with 100 columns
+% 
+V100 = zeros(1440, 100);
+
+n = 1440;
+u = randn(n,1);
+u = u / norm(u);
+
+for i = 1:100
+    while 1
+        u_new = A_T*A*u; 
+        summation = 0;
+        for j = 1:i
+            summation = summation + (u_new'*V100(:,j))*V100(:,j);
+        end
+        u_new = u_new - summation;
+        u_new = u_new/norm(u_new);
+        if norm(u_new - u) < 0.001
+            break;
+        end
+        u = u_new;
+    end
+    V100(:,i) = u_new';
+end
+
+[sigma100] = eig(A_T*A, "matrix");
+
+sigma100 = sqrt(sigma100);
+sigma100 = trimdata(sigma100,[100 100]);
+
+U100 = [];
+for i = 1:100
+    U100(:,i) = A*V100(:,i)/sigma100(i,i);
+end
+
+figure(5)
+surf(dataLong,dataLat,((U100*sigma100*V100')/1000)','EdgeColor','none')
+colorbar
+title('Mariana Depth along Latitude and Longitude, (Incomplete SVD (n=100)');
+xlabel('Longitude (degrees)');
+ylabel('Latitude (degrees)');
+zlabel('Elevation (km)');
+grid
+
+figure(6)
+Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
+contour(dataLong,dataLat,(U100*sigma100*V100'/1000)', Levels)
+title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=100)');
+xlabel('Longitude (degrees)');
+ylabel('Latitude (degrees)');
+cb = contourcbar("eastoutside");
+cb.XLabel.String = "Elevation (km)";
+grid
 \end{lstlisting}
 \end{spacing}
 \end{appendices}

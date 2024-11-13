@@ -2,5 +2,7 @@
 \contentsline {section}{\numberline {2}Inital Trench Investigations}{2}{section.2}%
 \contentsline {section}{\numberline {3}Eigenvalue Computation}{3}{section.3}%
 \contentsline {section}{\numberline {4}SVD Incomplete Decomposition}{4}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{7}{section.5}%
-\contentsline {section}{\numberline {A}Figure \ref {fig:1} Code}{8}{appendix.a.A}%
+\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}%
+\contentsline {section}{\numberline {A}Figure \ref {fig:1} Code}{9}{appendix.a.A}%
+\contentsline {section}{\numberline {B}Figure \ref {fig:2} and \ref {fig:3} Code}{11}{appendix.a.B}%
+\contentsline {section}{\numberline {C}Figure \ref {fig:4}, \ref {fig:5}, \ref {fig:6}, \ref {fig:7} Code}{13}{appendix.a.C}%
