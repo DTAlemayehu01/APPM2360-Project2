@@ -74,12 +74,12 @@ colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
-zlabel('Elevation (meters)');
+zlabel('Elevation (km)');
 grid
 
 figure(2)
 Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
-contour(dataLong,dataLat,(U*sigma*V'/1000)', Level)
+contour(dataLong,dataLat,(U*sigma*V'/1000)', Levels)
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
@@ -133,7 +133,7 @@ colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
 xlabel('Longitude');
 ylabel('Latitude');
-zlabel('Elevation (meters)');
+zlabel('Elevation (km)');
 grid
 
 figure(4)
@@ -162,7 +162,7 @@ for i = 1:100
         for j = 1:i
             summation = summation + (u_new'*V100(:,j))*V100(:,j);
         end
-        u_new = u_new - summation';
+        u_new = u_new - summation;
         u_new = u_new/norm(u_new);
         if norm(u_new - u) < 0.001
             break;
@@ -186,9 +186,9 @@ figure(5)
 surf(dataLong,dataLat,((U100*sigma100*V100')/1000)','EdgeColor','none')
 colorbar
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD (n=100)');
-xlabel('Longitude');
-ylabel('Latitude');
-zlabel('Elevation (meters)');
+xlabel('Longitude (degrees)');
+ylabel('Latitude (degrees)');
+zlabel('Elevation (km)');
 grid
 
 figure(6)
