@@ -13,7 +13,7 @@ tic
 %Transpose A
 A_T = A';
 %Create Unit vector
-n = (1);
+n = (1440);
 x = randn(n,1);
 x = x / norm(x);
 
@@ -26,22 +26,26 @@ for i = 1:10
 %Initialize the new unit vector as x_new
 x_new = A_T*A*x;
 x_new = x_new / (norm(x_new));
-
+    
     %Check x_new - x until the value is small
     if  norm(x_new - x) <= 0
         break;
     end
-
+    
 x = x_new;
 
 end
 %Show final eigenvalue and eigenvector
-eigen_first = x;
-x_n_vector = sqrt(sum(x^2));
+eigen_first = x'*A_T*A*x;
+%x_n_vector = sqrt(sum(x^2));
 N = length(x);
 %plot of the final vector against the length of the matrix from 1 to N
 hold on;
-plot(1:N,x_n_vector, 'k-');
+plot(1:N,x, 'k-');
+xlabel('nth Component')
+ylabel('nth Component Magnitude')
+title('Vector Components as a Function of the nth Vector Component')
+eigen_first
 toc
 %% Part 2
 tic
@@ -92,6 +96,16 @@ V = v_matrix;
 %semilog plot of the 50 eigenvalues computed 
 figure(2)
 semilogy(1:50, trimdata(v_vals50, [50 1]), 'k-');
+xlabel('nth Largest Eigenvalue')
+ylabel('Eigenvalues (Natural Log Scaled)')
+title('Eigenvalues as a function of the nth Largest Eigenvalue')
+grid
+
+figure(3)
+semilogx(1:50, trimdata(v_vals50, [50 1]), 'k-');
+xlabel('nth Largest Eigenvalue (Natural Log Scaled)')
+ylabel('Eigenvalues')
+title('Eigenvalues as a function of the nth Largest Eigenvalue')
 grid
 
 toc

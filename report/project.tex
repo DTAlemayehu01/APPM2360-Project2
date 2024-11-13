@@ -94,7 +94,7 @@ We use this algorithm to find the eigenvector associated with the largest eigenv
 \begin{figure}[H]
     \centering
     \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section2/vector_plot}
-    \caption{Eigenvector \(\vb{V_1}\) plot}
+    \caption{Eigenvector \(\vb{V_1}\) plot, Eigenvalue: \(3.8803*10^{13}\)
     \label{fig:2}
 \end{figure}
 We can also apply \textit{Gram-Schmidt Orthogonalization} to find eigenvectors as well which we'll use for the 50 largest eigenvectors. 
@@ -145,11 +145,13 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_100}
+        \caption{Max Depth at -10.9719 km, Latitude 21.2167^\degree Longitude 140.2167^\degree}
         \label{fig:5a}
     \end{subfigure}
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_100}
+        \caption{Mean Depth: -7.1972}
         \label{fig:5b}
     \end{subfigure}
     \end{adjustwidth}
@@ -162,13 +164,13 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.60\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_50}
-        \caption{Maximal Depth: km at Lattiude Longitude}
+        \caption{Maximal Depth: -10.8647 km at Latitude 16.5750^\degree Longitude 140.2583^\degree}
         \label{fig:6a}
     \end{subfigure}
     \begin{subfigure}[b]{0.60\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_50}
-        \caption{Average Depth Below Sea Level: km}
+        \caption{Average Depth Below Sea Level: -7.1742 km}
         \label{fig:6b}
     \end{subfigure}
     \end{adjustwidth}
@@ -181,12 +183,13 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_10}
+        \caption{Maximal Depth: -10.3722 km at Latitude 18.4500^\degree Longitude 140.2417^\degree}
         \label{fig:7a}
     \end{subfigure}
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/surf_10}
-        \caption{\(\mathbf{\Sigma}\) Matrix}
+        \caption{Average Depth Below Sea Level: -7.0495 km}
         \label{fig:7b}
     \end{subfigure}
     \end{adjustwidth}
