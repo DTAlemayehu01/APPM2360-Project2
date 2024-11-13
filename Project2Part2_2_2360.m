@@ -8,60 +8,90 @@ A = readmatrix('mariana_depth.csv');
 
 
 %% Part 1
+
 tic
 %Transpose A
 A_T = A';
 %Create Unit vector
-n = 1;
-x = randn(length(A'*A),1);
+n = (1);
+x = randn(n,1);
 x = x / norm(x);
 
-%Iterate until the unit vector for n+1 minus the previous unit vector
-%doesn't change
+%{
+Iterate until the unit vector for n+1 minus the previous unit vector
+doesn't change
+%}
 for i = 1:10
-unit_x = A_T*A*x;
-unit_x = unit_x / (norm(unit_x));
 
-if  norm(unit_x - x) <= 0
-break;
-end
+%Initialize the new unit vector as x_new
+x_new = A_T*A*x;
+x_new = x_new / (norm(x_new));
 
-x = unit_x;
+    %Check x_new - x until the value is small
+    if  norm(x_new - x) <= 0
+        break;
+    end
+
+x = x_new;
 
 end
 %Show final eigenvalue and eigenvector
 eigen_first = x;
-x_n_vector = sqrt(sum(x.^2));
+x_n_vector = sqrt(sum(x^2));
 N = length(x);
+%plot of the final vector against the length of the matrix from 1 to N
 hold on;
-plot(1:N, x_n_vector, 'k-');
+plot(1:N,x_n_vector, 'k-');
 toc
 %% Part 2
-v_matrix = zeros(length(A'*A),50);
+tic
+%Initializes vectors as matrices of zeros
+v_matrix = zeros(length(A_T*A),50);
 v_vals50 = zeros(50,1);
-%Initialize a unit vector
-% 
 
+%for loop to find eigenvalues and eigenvectors
 for i = 1:50
-u = randn(length(A'*A),1);
+
+%Initialize a unit vector
+u = randn(length(A_T*A),1);
 u = u / norm(u);
+
+%checks if 
     while true
-    u_new_asterisk = A'*A*u;
+    u_new_asterisk = A_T*A*u;
+        %iterated to compute eigenvalues for each column
         for j = 1:(i-1)
           u_new_asterisk = u_new_asterisk - (u_new_asterisk'*v_matrix(:,j))*v_matrix(:,j);
         end
+
+        %Reinitialize unit vector so it can be checked against the previous
         u_new = u_new_asterisk/ norm(u_new_asterisk);
+
+        %Checks eigenvalue for a tolerance less than 0.002
         if norm(u_new - u) < 0.002
             break;
         end
+    %Iterates the new unit vector
     u = u_new;
 
     end
+%{
+Saves eigen vectors and values to their corresponding 1440 x 50 and 50 x 1
+matrices
+%}
 v_matrix(:,i) = u_new;
-v_vals50(i) = (u_new')*(A')*(A)*(u_new);
+v_vals50(i) = (u_new')*(A_T)*(A)*(u_new);
+
 end
+%final U_n+1 as v_i
 v_i = u_new;
 
+%eigenvectors as columns of 1440 x 50 matrix
+V = v_matrix;
+
+%semilog plot of the 50 eigenvalues computed 
 figure(2)
 semilogy(1:50, trimdata(v_vals50, [50 1]), 'k-');
 grid
+
+toc
