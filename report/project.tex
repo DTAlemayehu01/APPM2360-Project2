@@ -89,6 +89,7 @@ In addition, in our data subset can also find that the average depth of the tren
 \section{Eigenvalue Computation}
 We can find an eigenvectors associated with our matrix using an algorithm outlined in Appendix \ref{appendx:B}.
 The reason this algorithm works can be explained as follows:
+The eigenvectors constitute a basis for R^1440 and \(\va{u_0}\) is the initial guess vector as a linear combination of the eigenvectors. Thus, we get the result that \(A^T*A*V_{i} = lambda_{i}*V_{i}\). As we solve for \(u_1\), the initial guess vector gets normalized by multiplying it by A^T*A which can be used to find a new vector. As we continue, each of these new vectors gets stored in a matrix and the diagonal stores the eigenvalues associated with the vector. This continues until we get all of the eigenvalues associated with the original matrix. Decomposing the linear combination of the matrix into its parts and finding the eigenvalues.
 We use this algorithm to find the eigenvector associated with the largest eigenvalue, and then plot the components of the eigenvector as a function of the \(n\)th component.
 \begin{figure}[H]
     \centering
