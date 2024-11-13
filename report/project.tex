@@ -87,14 +87,19 @@ Utilizing Matlab's Contour and Surface Plots we can get a good picture of the tr
 We can also find that the maximum depth of the trench is -10.93 km at lattitude \(13.2\degree\) longitude \(140.3\degree\) (calculated in Appendix \ref{appendix:A}).
 In addition, in our data subset can also find that the average depth of the trench below sea level is given to be -7.2048 km (calculated in Appendix \ref{appendix:A}).
 \section{Eigenvalue Computation}
-We can find an eigenvectors associated with our matrix using an algorithm outlined in Appendix \ref{appendx:B}.
+We can find an eigenvectors associated with our matrix using an algorithm outlined in Appendix \ref{appendix:B}.
 The reason this algorithm works can be explained as follows:
-The eigenvectors constitute a basis for R^1440 and \(\va{u_0}\) is the initial guess vector as a linear combination of the eigenvectors. Thus, we get the result that \(A^T*A*V_{i} = lambda_{i}*V_{i}\). As we solve for \(u_1\), the initial guess vector gets normalized by multiplying it by A^T*A which can be used to find a new vector. As we continue, each of these new vectors gets stored in a matrix and the diagonal stores the eigenvalues associated with the vector. This continues until we get all of the eigenvalues associated with the original matrix. Decomposing the linear combination of the matrix into its parts and finding the eigenvalues.
+\newline
+The eigenvectors constitute a basis for \(R^{1440}\) and \(\va{u_0}\) is the initial guess vector as a linear combination of the eigenvectors. 
+Thus, we get the result that \(A^T*A*V_{i} = \lambda_{i}*V_{i}\). 
+As we solve for \(u_1\), the initial guess vector gets normalized by multiplying it by \(A^T*A\) which can be used to find a new vector. 
+As we continue, each of these new vectors gets stored in a matrix and the diagonal stores the eigenvalues associated with the vector. 
+This continues until we get all of the eigenvalues associated with the original matrix. Decomposing the linear combination of the matrix into its parts and finding the eigenvalues.
 We use this algorithm to find the eigenvector associated with the largest eigenvalue, and then plot the components of the eigenvector as a function of the \(n\)th component.
 \begin{figure}[H]
     \centering
     \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section2/vector_plot}
-    \caption{Eigenvector \(\vb{V_1}\) plot, Eigenvalue: \(3.8803*10^{13}\)
+    \caption{Eigenvector \(\vb{V_1}\) plot, Eigenvalue: \(3.8803*10^{13}\), Code in Appendix \ref{appendix:B}}
     \label{fig:2}
 \end{figure}
 We can also apply \textit{Gram-Schmidt Orthogonalization} to find eigenvectors as well which we'll use for the 50 largest eigenvectors. 
@@ -114,23 +119,25 @@ After completing our Incomplete SVD Decomposition (where \(\vb{U},\vb{V^T}\) hav
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/spy_sigma}
         \caption{\(\mathbf{\Sigma}\) Matrix}
-        %\label{fig:4a}
+        \label{fig:4a}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/spy_u}
         \caption{\(\mathbf{U}\) Matrix}
-        %\label{fig:4a}
+        \label{fig:4b}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/spy_vT}
         \caption{\(\mathbf{V^T}\) Matrix}
-        %\label{fig:4a}
+        \label{fig:4c}
     \end{subfigure}
     \end{adjustwidth}
+    \caption{Code in Appendix \ref{appendix:C}}
+    \label{fig:4}
 \end{figure}
 As one method for comparing the efficiency of the Incomplete SVD vs the full matrix of trench data we can compare the total number of entries and the total number of nonzero entries. 
 For our SVD up to the 50th eigenvalue we note the following:
@@ -145,7 +152,8 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_100}
-        \caption{Max Depth at -10.9719 km, Latitude 21.2167^\degree Longitude 140.2167^\degree}
+        \caption{Max Depth at -10.9719 km, Latitude \(21.2167\degree\) Longitude \(140.2167\degree\)}
+        \caption{Max Depth at -10.9719 km, Latitude}
         \label{fig:5a}
     \end{subfigure}
     \begin{subfigure}[b]{0.65\textwidth}
@@ -155,8 +163,8 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
         \label{fig:5b}
     \end{subfigure}
     \end{adjustwidth}
-    \label{fig:5}
     \caption{Code in Appendix \ref{appendix:C}}
+    \label{fig:5}
 \end{figure}
 \begin{figure}[H]
     \begin{adjustwidth}{-1in}{-1in}
@@ -164,7 +172,7 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.60\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_50}
-        \caption{Maximal Depth: -10.8647 km at Latitude 16.5750^\degree Longitude 140.2583^\degree}
+        \caption{Maximal Depth: -10.8647 km at Latitude \(16.5750\degree\) Longitude \(140.2583\degree\)}
         \label{fig:6a}
     \end{subfigure}
     \begin{subfigure}[b]{0.60\textwidth}
@@ -174,8 +182,8 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
         \label{fig:6b}
     \end{subfigure}
     \end{adjustwidth}
-    \label{fig:6}
     \caption{Code in Appendix \ref{appendix:C}}
+    \label{fig:6}
 \end{figure}
 \begin{figure}[H]
     \begin{adjustwidth}{-1in}{-1in}
@@ -183,7 +191,7 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
     \begin{subfigure}[b]{0.65\textwidth}
         \centering
         \includesvg[inkscapelatex=false, width=\textwidth]{../figures/section3/contour_10}
-        \caption{Maximal Depth: -10.3722 km at Latitude 18.4500^\degree Longitude 140.2417^\degree}
+        \caption{Maximal Depth: -10.3722 km at Latitude \(18.4500\degree\) Longitude \(140.2417\degree\)}
         \label{fig:7a}
     \end{subfigure}
     \begin{subfigure}[b]{0.65\textwidth}
@@ -193,14 +201,14 @@ We've made plots of several SVD decompositions with varying column counts (10, 5
         \label{fig:7b}
     \end{subfigure}
     \end{adjustwidth}
-    \label{fig:7}
     \caption{Code in Appendix \ref{appendix:C}}
+    \label{fig:7}
 \end{figure}
 As we reduce the size of the \(\vb{\Sigma}, \vb{U}, \vb{V}\) matricies we notice that our graph appears to "smooth out". 
 Commonly, this is refered to as a lower resolution version of our original data.
 Additionally, we'll note that the incomplete SVD up to the 10th largest eigenvalue is far more noticable "low res" than the other two incomplete SVDs we provide which are far closer/more similar to our original data.
 \section{Conclusion}
-Efficacy of incomplete SVD decomposition in data representation and memory management.
+The Incomplete SVD proves to be an extremely efficient way of maintaining the unique structure of the Mariana trench while being able to perform sophisticated analysis on it. However, depending on whether or not we are interested in the whole trench we may be able to apply the SVD on an even small subset of the data. Another thing to keep in mind is the differences in resolution as we further complete our SVD. What makes the SVD so powerful is that only a small number of rows/columns are needed to get a fairly precise picture.
 \pagebreak
 \begin{appendices}
 \section{Figure \ref{fig:1} Code} \label{appendix:A}
@@ -290,7 +298,7 @@ for i=1:length(Z)
 end
 
 meanTrenchDepth = meanNum/N;
-meanTrenchDepth/1000
+meanTrenchDepth/1000 
 \end{lstlisting}
 \end{spacing}
 \pagebreak
@@ -308,60 +316,107 @@ A = readmatrix('mariana_depth.csv');
 
 
 %% Part 1
+
 tic
 %Transpose A
 A_T = A';
 %Create Unit vector
-n = 1;
+n = (1440);
 x = randn(n,1);
 x = x / norm(x);
 
-%Iterate until the unit vector for n+1 minus the previous unit vector
-%doesn't change
+%{
+Iterate until the unit vector for n+1 minus the previous unit vector
+doesn't change
+%}
 for i = 1:10
-unit_x = A_T*A*x;
-unit_x = unit_x / (norm(unit_x));
 
-if  norm(unit_x - x) <= 0
-break;
-end
-
-x = unit_x;
+%Initialize the new unit vector as x_new
+x_new = A_T*A*x;
+x_new = x_new / (norm(x_new));
+    
+    %Check x_new - x until the value is small
+    if  norm(x_new - x) <= 0
+        break;
+    end
+    
+x = x_new;
 
 end
 %Show final eigenvalue and eigenvector
-eigen_final = x;
-k = eig(A'*A);
-x_n_vector = sqrt(sum(x^2));
+eigen_first = x'*A_T*A*x;
+%x_n_vector = sqrt(sum(x^2));
 N = length(x);
+%plot of the final vector against the length of the matrix from 1 to N
 hold on;
-plot(1:N, x_n_vector, 'k-');
+plot(1:N,x, 'k-');
+xlabel('nth Component')
+ylabel('nth Component Magnitude')
+title('Vector Components as a Function of the nth Vector Component')
+eigen_first
 toc
 %% Part 2
+tic
+%Initializes vectors as matrices of zeros
+v_matrix = zeros(length(A_T*A),50);
+v_vals50 = zeros(50,1);
 
-v_50 = zeros(50,1);
+%for loop to find eigenvalues and eigenvectors
+for i = 1:50
 
 %Initialize a unit vector
-n = 1;
-u = randn(n,1);
+u = randn(length(A_T*A),1);
 u = u / norm(u);
-% 
-for i = 1:50
-u_new_asterisk = A'*A*u;
-u_new = u_new_asterisk - sum((u_new_asterisk'*v_50(i)*v_50(i)));
-u_new = u_new / norm(u_new);
-if norm(u_new - u) < 0.002
-break;
-end
 
-u = u_new;
-end
+%checks if 
+    while true
+    u_new_asterisk = A_T*A*u;
+        %iterated to compute eigenvalues for each column
+        for j = 1:(i-1)
+          u_new_asterisk = u_new_asterisk - (u_new_asterisk'*v_matrix(:,j))*v_matrix(:,j);
+        end
 
+        %Reinitialize unit vector so it can be checked against the previous
+        u_new = u_new_asterisk/ norm(u_new_asterisk);
+
+        %Checks eigenvalue for a tolerance less than 0.002
+        if norm(u_new - u) < 0.002
+            break;
+        end
+    %Iterates the new unit vector
+    u = u_new;
+
+    end
+%{
+Saves eigen vectors and values to their corresponding 1440 x 50 and 50 x 1
+matrices
+%}
+v_matrix(:,i) = u_new;
+v_vals50(i) = (u_new')*(A_T)*(A)*(u_new);
+
+end
+%final U_n+1 as v_i
 v_i = u_new;
 
+%eigenvectors as columns of 1440 x 50 matrix
+V = v_matrix;
+
+%semilog plot of the 50 eigenvalues computed 
 figure(2)
-semilogy(1:50, trimdata(k, [50 1]), 'k-');
-grid 
+semilogy(1:50, trimdata(v_vals50, [50 1]), 'k-');
+xlabel('nth Largest Eigenvalue')
+ylabel('Eigenvalues (Natural Log Scaled)')
+title('Eigenvalues as a function of the nth Largest Eigenvalue')
+grid
+
+figure(3)
+semilogx(1:50, trimdata(v_vals50, [50 1]), 'k-');
+xlabel('nth Largest Eigenvalue (Natural Log Scaled)')
+ylabel('Eigenvalues')
+title('Eigenvalues as a function of the nth Largest Eigenvalue')
+grid
+
+toc 
 \end{lstlisting}
 \end{spacing}
 \pagebreak
@@ -404,14 +459,38 @@ for i = 1:50
     V(:,i) = u_new;
 end
 
-[sigma] = eig(A_T*A, "matrix");
+sigma = [50 50];
+for i = 1:50
+    sigma(i,i) = V(:,i)'*A_T*A*V(:,i);
+end
 sigma = sqrt(sigma);
-sigma = trimdata(sigma, [50 50]);
 
 U = [];
 for i = 1:50
     U(:,i) = A*V(:,i)/sigma(i,i);
 end
+
+[Min2, I] = min(U*sigma*V'/1000, [], 'all');
+[MinLat, MinLong] = ind2sub([1440 1320], I);
+Min2
+dataLat(MinLat)
+dataLong(MinLong)
+
+meanNum = 0;
+N = 0;
+
+TEMP = U*sigma*V'/1000;
+for i=1:1320
+    for j=1:1440
+        if TEMP(i,j) < -6
+            meanNum = meanNum + TEMP(i,j);
+            N = N + 1;
+        end
+    end
+end
+
+meanTrenchDepth = meanNum/N;
+meanTrenchDepth
 
 figure(11)
 spy(sigma)
@@ -488,15 +567,39 @@ for i = 1:10
     V10(:,i) = u_new';
 end
 
-[sigma10] = eig(A_T*A, "matrix");
-
+sigma10 = [10 10];
+for i = 1:10
+    sigma10(i,i) = V10(:,i)'*A_T*A*V10(:,i);
+end
 sigma10 = sqrt(sigma10);
-sigma10 = trimdata(sigma,[10,10]);
 
 U10 = [];
 for i = 1:10
     U10(:,i) = A*V10(:,i)/sigma10(i,i);
 end
+
+[Min2, I] = min(U10*sigma10*V10'/1000, [], 'all');
+[MinLat, MinLong] = ind2sub([1440 1320], I);
+Min2
+dataLat(MinLat)
+dataLong(MinLong)
+
+meanNum = 0;
+N = 0;
+
+TEMP = U10*sigma10*V10'/1000;
+for i=1:1320
+    for j=1:1440
+        if TEMP(i,j) < -6
+            meanNum = meanNum + TEMP(i,j);
+            N = N + 1;
+        end
+    end
+end
+
+meanTrenchDepth = meanNum/N;
+meanTrenchDepth
+
 
 figure(3)
 surf(dataLong,dataLat,((U10*sigma10*V10')/1000)','EdgeColor','none')
@@ -543,15 +646,38 @@ for i = 1:100
     V100(:,i) = u_new';
 end
 
-[sigma100] = eig(A_T*A, "matrix");
-
+sigma100 = [100 100];
+for i = 1:100
+    sigma100(i,i) = V100(:,i)'*A_T*A*V100(:,i);
+end
 sigma100 = sqrt(sigma100);
-sigma100 = trimdata(sigma100,[100 100]);
 
 U100 = [];
 for i = 1:100
     U100(:,i) = A*V100(:,i)/sigma100(i,i);
 end
+
+[Min2, I] = min(U100*sigma100*V100'/1000, [], 'all');
+[MinLat, MinLong] = ind2sub([1440 1320], I);
+Min2
+dataLat(MinLat)
+dataLong(MinLong)
+
+meanNum = 0;
+N = 0;
+
+TEMP = U100*sigma100*V100'/1000;
+for i=1:1320
+    for j=1:1440
+        if TEMP(i,j) < -6
+            meanNum = meanNum + TEMP(i,j);
+            N = N + 1;
+        end
+    end
+end
+
+meanTrenchDepth = meanNum/N;
+meanTrenchDepth
 
 figure(5)
 surf(dataLong,dataLat,((U100*sigma100*V100')/1000)','EdgeColor','none')
@@ -570,7 +696,7 @@ xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
 cb = contourcbar("eastoutside");
 cb.XLabel.String = "Elevation (km)";
-grid
+grid 
 \end{lstlisting}
 \end{spacing}
 \end{appendices}
