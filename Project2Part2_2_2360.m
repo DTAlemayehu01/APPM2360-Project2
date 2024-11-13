@@ -13,7 +13,7 @@ tic
 A_T = A';
 %Create Unit vector
 n = 1;
-x = randn(n,1);
+x = randn(length(A'*A),1);
 x = x / norm(x);
 
 %Iterate until the unit vector for n+1 minus the previous unit vector
@@ -30,35 +30,38 @@ x = unit_x;
 
 end
 %Show final eigenvalue and eigenvector
-eigen_final = x;
-k = eig(A'*A);
-x_n_vector = sqrt(sum(x^2));
+eigen_first = x;
+x_n_vector = sqrt(sum(x.^2));
 N = length(x);
 hold on;
 plot(1:N, x_n_vector, 'k-');
 toc
 %% Part 2
-
-v_50 = zeros(50,1);
-
+v_matrix = zeros(length(A'*A),50);
+v_vals50 = zeros(50,1);
 %Initialize a unit vector
-n = 1;
-u = randn(n,1);
-u = u / norm(u);
 % 
+
 for i = 1:50
-u_new_asterisk = A'*A*u;
-u_new = u_new_asterisk - sum((u_new_asterisk'*v_50(i)*v_50(i)));
-u_new = u_new / norm(u_new);
-if norm(u_new - u) < 0.002
-break;
-end
+u = randn(length(A'*A),1);
+u = u / norm(u);
+    while true
+    u_new_asterisk = A'*A*u;
+        for j = 1:(i-1)
+          u_new_asterisk = u_new_asterisk - (u_new_asterisk'*v_matrix(:,j))*v_matrix(:,j);
+        end
+        u_new = u_new_asterisk/ norm(u_new_asterisk);
+        if norm(u_new - u) < 0.002
+            break;
+        end
+    u = u_new;
 
-u = u_new;
+    end
+v_matrix(:,i) = u_new;
+v_vals50(i) = (u_new')*(A')*(A)*(u_new);
 end
-
 v_i = u_new;
 
 figure(2)
-semilogy(1:50, trimdata(k, [50 1]), 'k-');
+semilogy(1:50, trimdata(v_vals50, [50 1]), 'k-');
 grid
