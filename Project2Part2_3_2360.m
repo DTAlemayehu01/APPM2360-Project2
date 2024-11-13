@@ -12,24 +12,25 @@ A_T = A';
 
 V = zeros(1440, 50);
 
+n = 1440;
+u = randn(n,1);
+u = u / norm(u);
+
 for i = 1:50
-    n = 1440;
-    u = randn(n,1);
-    u = u / norm(u);
     while 1
         u_new = A_T*A*u;
         summation = 0;
         for j = 1:i
-            summation = summation + (u_new'*V(j))*V(j);
+            summation = summation + (u_new'*V(:,j))*V(:,j);
         end
-        u_new = u_new - summation';
+        u_new = u_new - summation;
         u_new = u_new/norm(u_new);
         if norm(u_new - u) < 0.001
             break;
         end
         u = u_new;
     end
-    V(:,i) = u_new';
+    V(:,i) = u_new;
 end
 
 [sigma] = eig(A_T*A, "matrix");
@@ -78,8 +79,7 @@ grid
 
 figure(2)
 Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
-%contour(dataLong,dataLat,(U*sigma*V'/1000)', Level)
-contour(dataLong,dataLat,((U*sigma*V')/1000)')
+contour(dataLong,dataLat,(U*sigma*V'/1000)', Level)
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=50)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
@@ -96,17 +96,18 @@ grid
 %
 V10 = zeros(1440, 10);
 
+n = 1440;
+u = randn(n,1);
+u = u / norm(u);
+
 for i = 1:10
-    n = 1440;
-    u = randn(n,1);
-    u = u / norm(u);
     while 1
         u_new = A_T*A*u;
         summation = 0;
         for j = 1:i
-            summation = summation + (u_new'*V10(j))*V10(j);
+            summation = summation + (u_new'*V10(:,j))*V10(:,j);
         end
-        u_new = u_new - summation';
+        u_new = u_new - summation;
         u_new = u_new/norm(u_new);
         if norm(u_new - u) < 0.001
             break;
@@ -137,8 +138,7 @@ grid
 
 figure(4)
 Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
-%contour(dataLong,dataLat,(U10*sigma10*V10'/1000)', Levels)
-contour(dataLong,dataLat,((U10*sigma10*V10')/1000)')
+contour(dataLong,dataLat,(U10*sigma10*V10'/1000)', Levels)
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=10)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
@@ -151,15 +151,16 @@ grid
 % 
 V100 = zeros(1440, 100);
 
+n = 1440;
+u = randn(n,1);
+u = u / norm(u);
+
 for i = 1:100
-    n = 1440;
-    u = randn(n,1);
-    u = u / norm(u);
     while 1
-        u_new = A_T*A*u;
+        u_new = A_T*A*u; 
         summation = 0;
         for j = 1:i
-            summation = summation + (u_new'*V100(j))*V100(j);
+            summation = summation + (u_new'*V100(:,j))*V100(:,j);
         end
         u_new = u_new - summation';
         u_new = u_new/norm(u_new);
@@ -192,8 +193,7 @@ grid
 
 figure(6)
 Levels = [-11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11];
-%contour(dataLong,dataLat,(U100*sigma100*V100'/1000)', Levels)
-contour(dataLong,dataLat,((U100*sigma100*V100')/1000)')
+contour(dataLong,dataLat,(U100*sigma100*V100'/1000)', Levels)
 title('Mariana Depth along Latitude and Longitude, (Incomplete SVD n=100)');
 xlabel('Longitude (degrees)');
 ylabel('Latitude (degrees)');
